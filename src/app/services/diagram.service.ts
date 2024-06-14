@@ -15,7 +15,6 @@ export class DiagramService {
   constructor(private http: HttpClient) { }
 
   generateDiagram(resources: Resource[], relationships: Relationship[], clusters: Cluster[]): Observable<{ message: string, image_url: string }> {
-    const endpoint = `${this.apiUrl}/generate-diagram`.replace(/\/\//g, '/'); // Remueve cualquier doble barra
-    return this.http.post<{ message: string, image_url: string }>(endpoint, { resources, relationships, clusters });
+    return this.http.post<{ message: string, image_url: string }>(`${this.apiUrl}/generate-diagram`, { resources, relationships, clusters });
   }
 }

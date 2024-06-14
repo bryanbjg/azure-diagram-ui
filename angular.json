@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/azure-diagram-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -47,8 +47,6 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputPath": "docs",
-              "baseHref": "/azure-diagram-ui/",
               "budgets": [
                 {
                   "type": "initial",
@@ -73,12 +71,15 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "azure-diagram-ui:build"
+          },
           "configurations": {
             "production": {
-              "buildTarget": "azure-diagram-ui:build:production"
+              "browserTarget": "azure-diagram-ui:build:production"
             },
             "development": {
-              "buildTarget": "azure-diagram-ui:build:development"
+              "browserTarget": "azure-diagram-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
