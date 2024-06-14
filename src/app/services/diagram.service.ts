@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Resource } from '../interfaces/resource.interface';
 import { Cluster } from '../interfaces/cluster.interface';
 import { Relationship } from '../interfaces/relationship';
-import { environment } from '../environments/environment';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
