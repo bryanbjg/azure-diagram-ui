@@ -11,12 +11,11 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class DiagramService {
-
   private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
   generateDiagram(resources: Resource[], relationships: Relationship[], clusters: Cluster[]): Observable<{ message: string, image_url: string }> {
-    return this.http.post<{ message: string, image_url: string }>(`${this.apiUrl}/generate-diagram`, { resources, relationships, clusters });
+    return this.http.post<{ message: string, image_url: string }>(`${this.apiUrl}generate-diagram`, { resources, relationships, clusters });
   }
 }
