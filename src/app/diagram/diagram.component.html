@@ -1,0 +1,250 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <h5>Analytics</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of analyticsResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>Compute</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of computeResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>Database</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of databaseResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>DevOps</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of devopsResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>General</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of generalResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>Identity</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of identityResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>Integration</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of integrationResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>IoT</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of iotResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>Migration</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of migrationResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>ML</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of mlResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>Mobile</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of mobileResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>Network</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of networkResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>Security</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of securityResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>Storage</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of storageResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <h5>Web</h5>
+            <ul>
+              <li class="nav-item" *ngFor="let resource of webResources">
+                <a class="nav-link" href="#" (click)="selectResource(resource)">
+                  <img [src]="getImagePath(resource.type)" alt="{{ resource.type }} icon" class="resource-icon">
+                  {{ resource.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Diagrama para Recursos en Azure</h1>
+      </div>
+
+      <!-- Notification -->
+      <div *ngIf="notificationMessage" class="alert alert-info" role="alert">
+        {{ notificationMessage }}
+      </div>
+
+      <h4>Selected Resources</h4>
+      <div class="selected-resources-container">
+          <ul class="list-group">
+              <li *ngFor="let resource of selectedResources" class="list-group-item">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="{{ resource.name }}" checked>
+                      <label class="form-check-label" for="{{ resource.name }}">
+                          {{ resource.name }}
+                      </label>
+                  </div>
+                  <button class="btn btn-sm btn-danger" (click)="removeResource(resource)">Remove</button>
+              </li>
+          </ul>
+      </div>
+
+      <!-- Relationships -->
+      <div class="relationships-container">
+        <h4>Add Relationships</h4>
+        <div class="relation-inputs">
+          <div class="form-group">
+            <label for="sourceResource">Source</label>
+            <select id="sourceResource" class="form-control" [(ngModel)]="sourceResource">
+              <option *ngFor="let resource of selectedResources" [value]="resource.name">{{ resource.name }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="targetResource">Target</label>
+            <select id="targetResource" class="form-control" [(ngModel)]="targetResource">
+              <option *ngFor="let resource of selectedResources" [value]="resource.name">{{ resource.name }}</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-warning mt-2" (click)="addRelationship()">Add Relationship</button>
+      </div>
+
+      <!-- Cluster Section -->
+      <div class="clusters-container">
+        <h4>Add Cluster</h4>
+        <div class="form-group">
+          <label for="clusterName">Cluster Name</label>
+          <input id="clusterName" class="form-control" [(ngModel)]="clusterName">
+        </div>
+        <button class="btn btn-primary mt-2" (click)="addCluster()">Add Cluster</button>
+      </div>
+
+      <!-- Generate Diagram Button -->
+      <div class="d-flex justify-content-center">
+        <button class="btn btn-dark mt-3" (click)="generateDiagram()">Generate Diagram</button>
+      </div>
+
+      <div *ngIf="isLoading" class="loader-container">
+        <i class="fas fa-spinner fa-spin"></i> Generando diagrama...
+      </div>
+
+      <div *ngIf="diagramUrl">
+        <h4>Generated Diagram</h4>
+        <a [href]="diagramUrl" download="diagram.png" class="btn btn-success">Download Diagram</a>
+        <div class="card mt-4">
+          <img [src]="diagramUrl" alt="Generated Diagram" class="card-img-top">
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
